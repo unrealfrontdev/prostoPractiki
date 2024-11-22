@@ -1,0 +1,16 @@
+{
+  "name": "prac1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raderice072",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "anime": "^0.1.2",
+    "react": "^18.3.1",
+    "reactdom": "^2.0.0"
+  }
+}
