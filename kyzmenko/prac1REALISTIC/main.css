@@ -1,0 +1,86 @@
+html * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 950px;
+}
+.header{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 1px solid black;
+}
+.menu{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+header .logoText{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 1px solid black;
+    width: 100%;
+    height: 600px;
+}
+footer{
+    border: 1px solid black;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.shopping{
+    border: 1px solid black;
+    width: 48%;
+    height: 550px;
+}
+.talons{
+    border: 1px solid black;
+    width: 100%;
+    height: 550px;
+}
+.talons  div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+    height: 25%;
+    flex-wrap: wrap;
+    
+}
+.part1{
+    display: flex;
+    
+
+}
+button{
+    width: 10%;
+    margin-left: 15px;
+}
