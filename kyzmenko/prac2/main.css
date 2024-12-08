@@ -1,0 +1,8 @@
+body {
+    overflow: hidden;
+}
+
+.container-fluid {
+    overflow-y: auto;
+    max-height: calc(100vh - 76px - 216px); /* вычитаем высоту header и footer */
+}

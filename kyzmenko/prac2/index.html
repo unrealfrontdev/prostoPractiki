@@ -4,48 +4,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практика 2</title>
+    <title>Пиццерия Freddy Fazber</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body style="height: 1000px;">
+<body style="min-height: 100vh; display: flex; flex-direction: column; overflow: hidden;">
     <!-- header -->
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap" />
-            </svg>
-            <span class="fs-4">Simple header</span>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom bg-dark text-white">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <img src="/img/logo.jpg" class="me-2" alt="Logo" style="width: 50px; height: 50px;">
+            <span class="fs-4">Freddy Fazber</span>
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Главная</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Особенности</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Цены</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">О компании</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active bg-danger" aria-current="page">Главная</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Меню</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Акции</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Доставка</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-white">Контакты</a></li>
+            <li class="nav-item">
+                <button class="nav-link text-white position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    Корзина
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                        0
+                    </span>
+                </button>
+            </li>
         </ul>
     </header>
     <!-- main -->
 
 
-    <div class="container-fluid row m-0 justify-content-center h-75">
-        <div class="container col-7 border border-primary m-2  align-items-end justify-content-center d-flex">
-            
-            <div class="d-flex h-75 w-75"><div class="container col-12 p-0 m-0  align-self-end d-flex border mb-4 border-primary h-50 ">Привет</div></div>
+    <div class="container-fluid row m-0 justify-content-end flex-grow-1">
+        <div class="container col-5 border-0 m-2 align-items-end justify-content-center d-flex">
+            <div class="d-flex h-75 w-100">
+                <div class="container p-4 text-center">
+                    <h1 class="display-4 mb-4">Добро пожаловать в Freddy Fazber!</h1>
+                    <p class="lead">Самая вкусная пицца в городе с доставкой за 30 минут</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 border border-primary m-2">
-            Одна колонка
+        <div class="col-4 border-0 shadow-sm rounded m-2 bg-light" style="margin-right: 0 !important;">
+            <h4 class="text-center mb-4 pt-3">Наше меню</h4>
+            
+            <!-- Измененная структура первой карточки -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/pizza_margarita.jpg" class="img-fluid rounded-start h-100" alt="Блюдо 1">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Пицца "Маргарита"</h5>
+                            <p class="card-text">Классическая итальянская пицца с томатами, моцареллой и базиликом</p>
+                            <p class="card-text"><small class="text-muted">599 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Измененная структура второй карточки -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/burger_klass.webp" class="img-fluid rounded-start h-100" alt="Блюдо 2">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Бургер "Классический"</h5>
+                            <p class="card-text">Сочная говяжья котлета с свежими овощами и специальным соусом</p>
+                            <p class="card-text"><small class="text-muted">399 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Измененная структура третьей карточки -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/filadelfia.jfif" class="img-fluid rounded-start h-100" alt="Блюдо 3">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Суши-сет "Филадельфия"</h5>
+                            <p class="card-text">Набор из 8 роллов с лососем, сливочным сыром и авокадо</p>
+                            <p class="card-text"><small class="text-muted">799 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Четвертая карточка -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/pasta_karbo.webp" class="img-fluid rounded-start h-100" alt="Блюдо 4">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Паста "Карбонара"</h5>
+                            <p class="card-text">Классическая итальянская паста с беконом в сливочном соусе</p>
+                            <p class="card-text"><small class="text-muted">459 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пятая карточка -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/cezar.webp" class="img-fluid rounded-start h-100" alt="Блюдо 5">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Салат "Цезарь"</h5>
+                            <p class="card-text">Свежий салат с курицей, сыром пармезан и фирменным соусом</p>
+                            <p class="card-text"><small class="text-muted">349 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шестая карточка -->
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/img/ramen.webp" class="img-fluid rounded-start h-100" alt="Блюдо 6">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Рамен с курицей</h5>
+                            <p class="card-text">Японский суп с лапшой, куриным филе и яйцом</p>
+                            <p class="card-text"><small class="text-muted">499 ₽</small></p>
+                            <button class="btn btn-danger">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- footer --> 
-    <footer class="bg-light text-center py-3">
-        <p>Адрес: Москва, ул. Примерная, 123</p>
-        <p>Телефон: +7 (495) 123-45-67</p>
-        <p>Email: info@example.com</p>
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <p>Адрес: Москва, ул. Примерная, 123</p>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: order@freddyfazber.ru</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Время работы</h5>
+                    <p>Пн-Пт: 10:00 - 23:00</p>
+                    <p>Сб-Вс: 11:00 - 23:00</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Следите за нами</h5>
+                    <p>
+                        <a href="#" class="text-white me-2">VK</a>
+                        <a href="#" class="text-white me-2">Telegram</a>
+                        <a href="#" class="text-white">Instagram</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Добавьте модальное окно корзины перед закрывающим тегом body -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Корзина</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Здесь будут отображаться товары корзины -->
+                    </div>
+                    <div class="text-end mt-3">
+                        <h5>Итого: <span id="cartTotal">0</span> ₽</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-danger" id="orderButton">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавьте скрипты Bootstrap и main.js перед закрывающим тегом body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
