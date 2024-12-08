@@ -5,7 +5,7 @@ html * {
 }
 body{
     width: 100%;
-    height: 950px;
+    height: 1200px;
 }
 .header{
     width: 100%;
@@ -13,23 +13,35 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-.menu{
+.menu {
     width: 100%;
     height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
+    background-color: #f0f0f0; /* добавлен серый фон */
+    /* border: 1px solid black; */
 }
-header .logoText{
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+header .logoText {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #0057B7; /* добавлен синий фон */
+    color: white; /* добавлен белый цвет текста */
+    font-size: 36px; /* увеличен размер шрифта */
+    font-weight: bold; /* сделан текст жирным для лучшей читаемости */
 }
 header div{
     display: flex;
@@ -37,9 +49,9 @@ header div{
     align-items: center;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-main{
+/* main{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -47,29 +59,59 @@ main{
     border: 1px solid black;
     width: 100%;
     height: 600px;
+} */
+main {
+    display: flex;
+    justify-content: center; /* изменено с space-around */
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: calc(100vh - 350px); /* новое - динамическая высота */
 }
-footer{
-    border: 1px solid black;
+footer a {
+    color: white; /* добавлен белый цвет для ссылок */
+    text-decoration: none; /* убрано подчеркивание ссылок */
+    font-size: 24px; /* увеличен размер шрифта для ссылок */
+}
+
+
+footer {
+    /* border: 1px solid black; */
     width: 100%;
     height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #0057B7; /* добавлен синий фон */
+    color: white; /* добавлен белый цвет текста */
+    font-size: 24px; /* увеличен размер шрифта */
 }
 .shopping{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 48%;
     height: 550px;
 }
-.talons{
+/* .talons{
     border: 1px solid black;
     width: 100%;
     height: 550px;
+} */
+.talons {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%; /* изменено с 550px */
+    display: flex; /* новое */
+    flex-direction: column; /* новое */
+    justify-content: space-between; /* новое */
+    padding: 20px; /* новое */
+    box-sizing: border-box; /* новое */
 }
 .talons  div {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 1px solid black; */
     width: 100%;
     height: 25%;
     flex-wrap: wrap;
@@ -84,3 +126,41 @@ button{
     width: 10%;
     margin-left: 15px;
 }
+
+.talon {
+    padding: 15px;
+    text-align: left; /* изменено с center */
+    width: 300px; /* добавлено фиксированную ширину */
+}
+
+.talon p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.counter {
+    display: flex;
+    justify-content: flex-start; /* изменено с center */
+    align-items: center;
+    gap: 10px;
+    text-align: left; /* изменено с center */
+    margin-top: 10px;
+}
+.counter-label {
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.counter button {
+    width: auto;        /* изменено с 30px */
+    min-width: 100px;   /* добавлено */
+    height: 40px;       /* изменено с 30px */
+    font-size: 16px;    /* изменено с 18px */
+    cursor: pointer;
+    padding: 5px 15px;  /* добавлено */
+    margin: 0 5px;      /* добавлено */
+}
+/* .talon img {
+   width: 100px;
+   
+} */

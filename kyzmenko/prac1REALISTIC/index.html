@@ -14,36 +14,53 @@
             <p>Пенсионный фонд Росиии</p>
         </div>
         <div class="menu">
-            <div>Главная страница</div>
-            <div>Льготы</div>
+            <div><a href="#">Главная страница</a></div>
+            <div><a href="#">Льготы</a></div>
         </div>
     </header>
     <main class="main">
-        
-        
         <div class="talons">
-
-            <div>
-                <p>запрос сведений о пенсии</p>
-                <p>кол-во доступых талонов:</p>
-                <button onclick="Svedenie()">взять талон</button>
+            <div class="talon">
+                
+                <p>Запись к врачу</p>
+                <div class="counter">
+                    <p class="counter-label">Кол-во талонов: <span id="counter0">12</span></p> 
+                    <button onclick="decrementCounter(0)">Записаться</button>
+                  
+                    <button style="opacity: 0;" onclick="incrementCounter(0)">+</button>
+                </div>
             </div>
-            <div>
-                <p>заявление на назначение пенсии</p>
-                <p>кол-во доступых талонов:</p>
-                <button onclick="Naznachenie()">взять талон</button>
+            <div class="talon">
+                
+                <p>Получение паспорта</p>
+                <div class="counter">
+                    <p class="counter-label">Кол-во талонов:<span id="counter1">0</span></p>  
+                    <button onclick="decrementCounter(1)">Записаться</button>
+                  
+                    <button style="opacity: 0;" onclick="incrementCounter(1)">+</button>
+                    
+                </div>
             </div>
-
-
-            <div><p>запрос дубликата документа</p>
-                <p>кол-во доступых талонов:</p>
-                <button onclick="Dublikat()">взять талон</button>
+            <div class="talon">
+              
+                <p>Регистрация ИП</p>
+                <div class="counter">
+                    <p class="counter-label">Кол-во талонов:<span id="counter2">6</span></p>  
+                    <button onclick="decrementCounter(2)">Записаться</button>
+                  
+                    <button  style="opacity: 0;"onclick="incrementCounter(2)" >+</button>
+                </div>
             </div>
-            <div><p>онлайн запись на прием</p>
-                <p>кол-во доступых талонов:</p>
-                <button onclick="Zapis()">взять талон</button>
+            <div class="talon">
+              
+                <p>Оформление пособий</p>
+                <div class="counter">
+                    <p class="counter-label">Кол-во талонов:<span id="counter3">11</span></p>   
+                    <button onclick="decrementCounter(3)">Записаться</button>
+                 
+                    <button style="opacity: 0;" onclick="incrementCounter(3)">+</button>
+                </div>
             </div>
-
         </div>
     </main>
     <footer class="footer">
